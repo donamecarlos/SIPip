@@ -1,0 +1,173 @@
+==[1/5] Dependencias del sistema (apt)...
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 82 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+build-essential is already the newest version (12.12ubuntu2.26.04.2).
+ccache is already the newest version (4.12.3-1).
+git is already the newest version (1:2.53.0-1ubuntu1).
+zip is already the newest version (3.0-15ubuntu3).
+unzip is already the newest version (6.0-29ubuntu1).
+pkg-config is already the newest version (2.5.1-4).
+patch is already the newest version (2.8-2build1).
+autoconf is already the newest version (2.72-3.1ubuntu2).
+automake is already the newest version (1:1.18.1-3build1).
+libtool is already the newest version (2.5.4-9).
+openjdk-17-jdk-headless is already the newest version (17.0.20.1+1-1~26.04).
+python3 is already the newest version (3.14.3-0ubuntu2).
+python3-pip is already the newest version (25.1.1+dfsg-1ubuntu2).
+python3-venv is already the newest version (3.14.3-0ubuntu2).
+python3-setuptools is already the newest version (78.1.1-0.1build1).
+libffi-dev is already the newest version (3.5.2-4).
+libssl-dev is already the newest version (3.5.5-1ubuntu3.7).
+libsqlite3-dev is already the newest version (3.46.1-9ubuntu0.3).
+libbz2-dev is already the newest version (1.0.8-6ubuntu0.1).
+libncurses-dev is already the newest version (6.6+20251231-1).
+zlib1g-dev is already the newest version (1:1.3.dfsg+really1.3.1-1ubuntu3.1).
+libcurl4-openssl-dev is already the newest version (8.18.0-1ubuntu2.7).
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 82 not upgraded.
+==[2/5] Host Python 3.12 + buildozer (pip --user con Python de uv)...
+Buildozer 1.6.0
+==[3/5] Copiando el proyecto a /root/sipip-build (conservando cache .buildozer)...
+==[4/5] Compilando APK (buildozer android debug)...
+# Ensure build layout
+# Check configuration tokens
+# Preparing build
+# Check requirements for android
+# Search for Git (git)
+#  -> found at /usr/bin/git
+# Search for Cython (cython)
+#  -> found at /root/.local/bin/cython
+# Search for Java compiler (javac)
+#  -> found at /usr/lib/jvm/java-17-openjdk-amd64/bin/javac
+# Search for Java keytool (keytool)
+#  -> found at /usr/lib/jvm/java-17-openjdk-amd64/bin/keytool
+# Install platform
+# Run 'git config --get remote.origin.url' ...
+# Cwd /root/sipip-build/.buildozer/android/platform/python-for-android
+https://github.com/kivy/python-for-android.git
+# Run 'git branch -vv' ...
+# Cwd /root/sipip-build/.buildozer/android/platform/python-for-android
+* master 58d21141 [origin/master] Merge pull request #3321 from kivy/release-2026.05.09
+# Run '/root/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python3.12 -m pip install -q --user appdirs colorama>=0.3.3 jinja2 sh>=2, <3.0; sys_platform!="win32" meson ninja build toml packaging setuptools wheel~=0.43.0' ...
+# Cwd None
+# Apache ANT found at /root/.buildozer/android/platform/apache-ant-1.9.4
+# Android SDK found at /root/.buildozer/android/platform/android-sdk
+# Recommended android's NDK version by p4a is: 28c
+# Android NDK found at /root/.buildozer/android/platform/android-ndk-r25b
+# Run '/root/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python3.12 -m pythonforandroid.toolchain aab -h --color=always --storage-dir=/root/sipip-build/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a --ndk-api=28 --ignore-setup-py --debug' ...
+# Cwd /root/sipip-build/.buildozer/android/platform/python-for-android
+# Check application requirements
+# Compile platform
+# Run '/root/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python3.12 -m pythonforandroid.toolchain create --dist_name=sipip --bootstrap=sdl2 --requirements=python3,kivy,pyjnius --arch=arm64-v8a --arch=armeabi-v7a --copy-libs --color=always --storage-dir=/root/sipip-build/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a --ndk-api=28 --ignore-setup-py --debug' ...
+# Cwd /root/sipip-build/.buildozer/android/platform/python-for-android
+# Command failed: ('/root/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python3.12', '-m', 'pythonforandroid.toolchain', 'create', '--dist_name=sipip', '--bootstrap=sdl2', '--requirements=python3,kivy,pyjnius', '--arch=arm64-v8a', '--arch=armeabi-v7a', '--copy-libs', '--color=always', '--storage-dir=/root/sipip-build/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a', '--ndk-api=28', '--ignore-setup-py', '--debug')
+# Error code: 1
+# ENVIRONMENT:
+#     SHELL = '/bin/bash'
+#     WSL2_GUI_APPS_ENABLED = '1'
+#     WSL_DISTRO_NAME = 'Ubuntu'
+#     JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
+#     NAME = 'DESKTOP-LIEN5M0'
+#     PWD = '/root/sipip-build'
+#     LOGNAME = 'root'
+#     PIP_BREAK_SYSTEM_PACKAGES = '1'
+#     HOME = '/root'
+#     LANG = 'C.UTF-8'
+#     WSL_INTEROP = '/run/WSL/25_interop'
+#     WAYLAND_DISPLAY = 'wayland-0'
+#     TERM = 'xterm-256color'
+#     USER = 'root'
+#     DISPLAY = ':0'
+#     SHLVL = '1'
+#     XDG_RUNTIME_DIR = '/mnt/wslg/runtime-dir'
+#     WSLENV = ''
+#     PATH = ('/root/.buildozer/android/platform/apache-ant-1.9.4/bin:/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program '
+ 'Files/Eclipse Adoptium/jdk-17.0.20.8-hotspot/bin:/mnt/c/Program Files '
+ '(x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Amazon '
+ 'Corretto/jdk25.0.2_10/bin:/mnt/c/Program Files/Amazon '
+ 'Corretto/jdk11.0.30_7/bin:/mnt/c/Program Files/Amazon '
+ 'Corretto/jdk17.0.18_9/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program '
+ 'Files/Microsoft VS Code/bin:/mnt/c/Program Files/dotnet:/mnt/c/Program '
+ 'Files/nodejs:/mnt/c/Program Files (x86)/NVIDIA '
+ 'Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Intel/Intel(R) '
+ 'Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) '
+ 'Management Engine Components/DAL:/mnt/c/Program Files/Git/cmd:/mnt/c/Program '
+ 'Files/WSL:/mnt/c/Users/x/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/x/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/x/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/x/AppData/Roaming/npm:/mnt/c/Users/x/AppData/Local/Programs/mongosh/:/mnt/c/Users/x/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/x/AppData/Local/Muse '
+ 'Hub/lib')
+#     HOSTTYPE = 'x86_64'
+#     PULSE_SERVER = 'unix:/mnt/wslg/PulseServer'
+#     DEBIAN_FRONTEND = 'noninteractive'
+#     _ = '/root/.local/bin/buildozer'
+#     OLDPWD = '/mnt/d/SIPip'
+#     PACKAGES_PATH = '/root/.buildozer/android/packages'
+#     ANDROIDSDK = '/root/.buildozer/android/platform/android-sdk'
+#     ANDROIDNDK = '/root/.buildozer/android/platform/android-ndk-r25b'
+#     ANDROIDAPI = '34'
+#     ANDROIDMINAPI = '28'
+# 
+# Buildozer failed to execute the last command
+# The error might be hidden in the log above this error
+# Please read the full log, and search for it before
+# raising an issue with buildozer itself.
+# In case of a bug report, please add a full log with log_level = 2
+# Command failed: ('/root/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python3.12', '-m', 'pythonforandroid.toolchain', 'create', '--dist_name=sipip', '--bootstrap=sdl2', '--requirements=python3,kivy,pyjnius', '--arch=arm64-v8a', '--arch=armeabi-v7a', '--copy-libs', '--color=always', '--storage-dir=/root/sipip-build/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a', '--ndk-api=28', '--ignore-setup-py', '--debug')
+# Error code: 1
+# ENVIRONMENT:
+#     SHELL = '/bin/bash'
+#     WSL2_GUI_APPS_ENABLED = '1'
+#     WSL_DISTRO_NAME = 'Ubuntu'
+#     JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
+#     NAME = 'DESKTOP-LIEN5M0'
+#     PWD = '/root/sipip-build'
+#     LOGNAME = 'root'
+#     PIP_BREAK_SYSTEM_PACKAGES = '1'
+#     HOME = '/root'
+#     LANG = 'C.UTF-8'
+#     WSL_INTEROP = '/run/WSL/704_interop'
+#     WAYLAND_DISPLAY = 'wayland-0'
+#     TERM = 'xterm-256color'
+#     USER = 'root'
+#     DISPLAY = ':0'
+#     SHLVL = '1'
+#     XDG_RUNTIME_DIR = '/mnt/wslg/runtime-dir'
+#     WSLENV = ''
+#     PATH = ('/root/.buildozer/android/platform/apache-ant-1.9.4/bin:/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program '
+ 'Files/Eclipse Adoptium/jdk-17.0.20.8-hotspot/bin:/mnt/c/Program Files '
+ '(x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Amazon '
+ 'Corretto/jdk25.0.2_10/bin:/mnt/c/Program Files/Amazon '
+ 'Corretto/jdk11.0.30_7/bin:/mnt/c/Program Files/Amazon '
+ 'Corretto/jdk17.0.18_9/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program '
+ 'Files/Microsoft VS Code/bin:/mnt/c/Program Files/dotnet:/mnt/c/Program '
+ 'Files/nodejs:/mnt/c/Program Files (x86)/NVIDIA '
+ 'Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Intel/Intel(R) '
+ 'Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) '
+ 'Management Engine Components/DAL:/mnt/c/Program Files/Git/cmd:/mnt/c/Program '
+ 'Files/WSL:/mnt/c/Users/x/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/x/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/x/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/x/AppData/Roaming/npm:/mnt/c/Users/x/AppData/Local/Programs/mongosh/:/mnt/c/Users/x/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/x/AppData/Local/Muse '
+ 'Hub/lib')
+#     HOSTTYPE = 'x86_64'
+#     PULSE_SERVER = 'unix:/mnt/wslg/PulseServer'
+#     DEBIAN_FRONTEND = 'noninteractive'
+#     _ = '/root/.local/bin/buildozer'
+#     OLDPWD = '/mnt/d/SIPip'
+#     PACKAGES_PATH = '/root/.buildozer/android/packages'
+#     ANDROIDSDK = '/root/.buildozer/android/platform/android-sdk'
+#     ANDROIDNDK = '/root/.buildozer/android/platform/android-ndk-r25b'
+#     ANDROIDAPI = '34'
+#     ANDROIDMINAPI = '28'
+# 
+# Buildozer failed to execute the last command
+# The error might be hidden in the log above this error
+# Please read the full log, and search for it before
+# raising an issue with buildozer itself.
+# In case of a bug report, please add a full log with log_level = 2

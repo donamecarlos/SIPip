@@ -1,0 +1,53 @@
+﻿[buildozer]
+# La compilacion se hace en WSL2/Linux (python-for-android no compila en Windows).
+log_level = 2
+warn_on_root = 0
+
+[app]
+# Nombre de la aplicacion
+title = SIPip
+
+# Version de la app (exigida por buildozer 1.6+)
+version = 0.3.0
+
+# Paquete de la app
+package.name = sipip
+package.domain = org.sipip
+
+# Directorio del codigo fuente (incluye sipclient, sipdroid y main.py)
+source.dir = .
+source.include_exts = py,png,jpg,jpeg,gif,kv,atlas,mp3
+source.exclude_dirs = tests,dist,build,.git,.buildozer,installer,tools,venv,.venv,__pycache__,versiones de escritorio
+
+# Punto de entrada
+source.main = main.py
+
+# Requisitos. Kivy trae SDL2; pyjnius expone AudioRecord/AudioTrack. El nucleo
+# SIP es Python puro (no hay recipes especiales).
+requirements = python3,kivy,pyjnius
+
+# Orientacion
+orientation = portrait
+
+# Ventana de la app (no navegador/escritorio).
+fullscreen = 0
+
+# Android: minSdk 28 = Android 9 (objetivo elegido por el usuario).
+android.api = 34
+android.minapi = 28
+android.archs = arm64-v8a
+android.ndk = 25b
+
+# Permisos: red para SIP/RT, microfono para la llamada, wake lock y estado de
+# la red para resolver la interfaz local sin abrir WiFi.
+android.permissions = INTERNET,RECORD_AUDIO,MODIFY_AUDIO_SETTINGS,WAKE_LOCK,ACCESS_WIFI_STATE,ACCESS_NETWORK_STATE
+
+# El PBX es en LAN (192.168.x.x) sin TLS: permite trafico en claro.
+# cleartext handled elsewhere if needed
+
+# Backups de aplicacion apagados (la contrasena vive en el directorio privado).
+android.allow_backup = False
+
+# Los tonos mp3 del usuario (si se copian a tonos/ antes de compilar) y un icono
+# opcional (icon.png) quedan empaquetados.
+android.icon = icon.png
